@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="menu-styling.css">
+<link rel="stylesheet" href="font-styling.css">
+<link rel="stylesheet" href="footer.css">
+
+<script type="text/javascript" src="video.json"></script>
+
+<style>
+
+body{
+  background-color: #444444;
+  margin: 0px;
+  }
+
+#main-menu {
+  position: static;
+  }
+
+
+  /* Intro Paragraph */
+
+   #intro-section {
+     background-color: #ffffff;
+     clear: both;
+     text-align: center;
+     padding-top: 20px;
+     margin-top: 18px;
+     padding-bottom: 20px;
+   }
+
+  #intro-section h2{
+    display: none;
+  }
+
+   #intro-section .content-holder{
+     width: 50%;
+     margin: auto;
+   }
+
+
+  /*-- Mobie Styling --*/
+
+  @media only screen and (max-width: 1020px) {
+      #intro-section .content-holder {
+        width: 70%;
+    }
+
+    #intro-section h2{
+      display: block;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 410px) {
+      #intro-section .content-holder {
+        width: 90%;
+    }
+  }
+
+
+/* Gallery Portfolio Grid */
+
+#gallery-container{
+  background-color: #ffffff;
+  padding-top: 18px;
+  clear: both;
+  }
+
+  .gallery-row{
+    display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  }
+
+  .gallery-row img{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .gallery-row .image-holder{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 31%;
+    height: auto;
+    margin: 0.19% 0.35%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .text-card{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 100%;
+  }
+
+  .text-card .text-card-background{
+   width: 100%;
+   height: 98.7%;
+   background-color: black;
+   background-size: cover;
+   opacity: 0.7;
+  }
+
+  .text-card p{
+   color: #ffffff;
+  font-size: 20px;
+  }
+
+  .card-reveal{
+    top: 0px;
+  }
+
+
+ /*--> Drop Down Video Holder <--*/
+
+    #video-holder {
+     flex-grow: 1;
+     flex-shrink: 1;
+     flex-basis: 100%;
+     margin: 0.19% 0.35%;
+     position: relative;
+     overflow: hidden;
+     height: 500px;
+     background-color: #3a3a3a;
+     display: block;
+     margin-bottom: 7px;
+   }
+
+
+
+/* Video Close Icon */
+
+#close-button {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+}
+#close-button:hover {
+  opacity: 1;
+}
+#close-button:before, #close-button:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 40px;
+  width: 3px;
+  background-color: #f1f1f1;
+}
+#close-button:before {
+  transform: rotate(45deg);
+}
+#close-button:after {
+  transform: rotate(-45deg);
+}
+
+/* Video Content Iframe */
+#video-holder iframe {
+	display: block;
+	margin: auto;
+  margin-top: 26px;
+}
+
+@media only screen and (max-width: 840px) {
+
+    #video-holder iframe {
+    	height: 333px;
+      width: 592px;
+    }
+
+    #video-holder {
+      height: 388px;
+   }
+
+}
+
+
+@media only screen and (max-width: 605px) {
+
+    #video-holder iframe {
+      height: 333px;
+      width: 96vw;
+  }
+
+}
+
+
+/* Grid Media Queries */
+
+@media only screen and (max-width: 1050px) {
+  .gallery-row .image-holder{
+    flex-basis: 35%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .gallery-row .image-holder{
+    flex-basis: 50%;
+  }
+
+  .text-card{
+    top: 0px;
+  }
+}
+
+
+/* Font Styling on Gallery Text Card */
+
+  .text-card h2{
+    color: #ffffff;
+    font-weight: 200;
+    margin: auto;
+    max-width: 365px;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 32%;
+    left: 0px;
+    right: 0px;
+  }
+
+  .text-card h3{
+    color: #ffffff;
+    font-weight: 200;
+    margin: auto;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    font-size: 22px;
+  }
+
+  .text-card p{
+    color: #ffffff;
+    margin: auto;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 56%;
+    left: 0px;
+    right: 0px;
+    font-size: 17px;
+  }
+
+  .text-card .vcta{
+        color: #ffffff;
+        top: 81%;
+        margin: auto;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        font-size: 20px;
+  }
+
+  .text-card a{
+        color: #ffffff;
+        top: 81%;
+        margin: auto;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        font-size: 20px;
+  }
+
+  .text-card .vcta span,
+  .text-card span.cta {
+    padding-right: 1%;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0px;
+    background-color: #dcdcdc;
+    padding: 5px 11px 5px 16px;
+    color: #000000;
+    border-radius: 5px;
+
+  }
+
+
+
+  .text-card .description-top-space{
+    top: 65%;
+  }
+
+
+</style>
+</head>
+
+
+
+
+<body>
+
+  <div id="main-menu" class="content-page">
+
+    <a href="index.html" id="home-button">Rachael Sherlock</a>
+
+    	<div id="mobile-menu-icon">
+
+  		<div></div>
+  		<div></div>
+  		<div></div>
+  	</div>
+
+     <ul id="button-list">
+       <a href="film-tv_v2.html"><li id="button-one" class="active">Film & TV</li></a>
+       <a href="skateboarding.html"><li id="button-two">Skateboarding</li></a>
+       <a href="about-me_v2.html"><li id="button-three">About Me</li></a>
+     </ul>
+
+
+  </div>
+
+<div id="intro-section">
+
+  <div class="content-holder">
+
+    <h2>Film & TV</h2>
+
+    <p id="slice-one-text">Over the past decade I’ve worked on many productions, from my own personal projects, to national daytime shows, live events and musical productions. My role in all has always been varied and diverse, switching between the differing disciplines of sound, camera, lighting and scenic departments most notably for ITV as their Senior Studio Technician.</p>
+
+    <p id="slice-one-text">Below are some of my favourite examples of the various projects and shows that I have worked on.<p>
+
+  </div>
+
+
+</div>
+
+<div id="gallery-container">
+  <div class="gallery-row">
+
+
+ <!-- Row 1 -->
+    <div class="image-holder">
+     <img src="images/film-tv/1-Urban-Hippie-Collective.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Urban Hippie Collective</h2>
+       <p>Self shot and edited vlog for Youtube and social media platforms</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/3-Design-Workshop.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Nike SB x Board of This</h2>
+       <p>Booked as the film maker to cover the night and deliver an Instagram highlights video for social media.</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/6-Lorraine-Show.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Lorraine Show ITV</h2>
+       <p>Senior Studio Technician at ITV Daytime</p>
+      </div>
+    </div>
+
+ <!-- Row 2 -->
+   <div class="image-holder">
+    <img src="images/film-tv/12-Bull-Fitness.jpg">
+    <div class="text-card">
+      <div class="text-card-background"></div>
+      <h2>Bull Fitness UK</h2>
+      <p>Promotional Video Film Maker</p>
+      <div class="vcta" data-row="2" data-video-title="bullFitnessUk">
+        <span class="cta">VIEW VIDEO</span>
+      </div>
+    </div>
+   </div>
+
+
+    <div class="image-holder">
+     <img src="images/film-tv/20-Good-Morning-Britain.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Good Morning Britain</h2>
+       <p>Senior Studio Technician ITV</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/23-The-Painter.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>The Painter and The Thief</h2>
+       <p>Line Producer/1st AD Award winning Short Film with £10,000 budget</p>
+       <div class="vcta" data-row="2" data-video-title="thePainterAndTheThief">
+         <span class="cta">VIEW VIDEO</span>
+       </div>
+     </div>
+    </div>
+
+
+<!-- Row 3 -->
+    <div class="image-holder">
+     <img src="images/film-tv/2-Skate-Workshop.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Ash Skates</h2>
+       <p>Directed and edited this workshop as part of a successfull pitch to Nike SB for funding.</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/7-This-Morning.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>This Morning ITV</h2>
+       <p>Camera Ped Operator for Hairy Bikers cooking item</p>
+       <a href="https://www.itv.com/thismorning/food/lamb-and-lentil-meatballs-the-hairy-bikers-recipe">
+         <span class="cta">VIEW VIDEO</span>
+       </a>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/9-Super-Birds-Gig.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Super Birds</h2>
+       <p>Photographer and Filmer / Live Music Shoot</p>
+     </div>
+    </div>
+
+
+
+  <!-- Row 4-->
+    <div class="image-holder">
+     <img src="images/film-tv/10-Introducing-the-girls-team.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Introducing The Girls Team</h2>
+       <p>Producer/Director for Three Amigos Skate Shop Edit</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/11-Eye-Music-Shoot.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Through Your Eyes</h2>
+       <p>Assistant Director for ‘Fear of Falling’ Music Video</p>
+       <div class="vcta" data-row="4" data-video-title="throughYourEyes">
+         <span class="cta">VIEW VIDEO</span>
+       </div>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/4-Girls-Jam.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>House of Vans Girls Jam</h2>
+       <p>Videographer to capture evening events Like a Girl co. and Vans.</p>
+     </div>
+    </div>
+
+
+
+  <!-- Row 5-->
+    <div class="image-holder">
+     <img src="images/film-tv/13-Loose-Women.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Loose Women</h2>
+       <p>Studio Technician and occasional Camera Operator</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/14-Mint-Cooking.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Mint Cooking</h2>
+       <p>Promo Video Film Maker</p>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/15-Camp-VC.jpeg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Camp VC</h2>
+       <p>Instagram Highlights Videographer and Skateboard Instructor for the Vans mini ramp</p>
+     </div>
+    </div>
+
+    <!-- Row 6-->
+      <div class="image-holder">
+       <img src="images/film-tv/16-Villa-Kula.jpeg">
+       <div class="text-card">
+         <div class="text-card-background"></div>
+         <h2>Villa Kula<br>(short documentary)</h2>
+         <p class="description-top-space">Sound Recordist</p>
+       </div>
+      </div>
+
+      <div class="image-holder">
+       <img src="images/film-tv/17-Girl-Skate-Competition.jpeg">
+       <div class="text-card">
+         <div class="text-card-background"></div>
+         <h2>Pioneer Skatepark</h2>
+         <p>Videographer at for the annual Girls Skate Competition</p>
+       </div>
+      </div>
+
+      <div class="image-holder">
+       <img src="images/film-tv/18-Flamingo-Land.jpeg">
+       <div class="text-card">
+         <div class="text-card-background"></div>
+         <h2>Flamingo Land<br>(promotional video)</h2>
+         <p class="description-top-space">Producer</p>
+       </div>
+      </div>
+
+      <!-- Row 7-->
+        <div class="image-holder">
+         <img src="images/film-tv/19-Camp-Rubicon.jpeg">
+         <div class="text-card">
+           <div class="text-card-background"></div>
+           <h2>Camp Rubicon</h2>
+           <p>Videographer for Promotional Video</p>
+         </div>
+        </div>
+
+        <div class="image-holder">
+         <img src="images/film-tv/5-The-Banes.jpeg">
+         <div class="text-card">
+           <div class="text-card-background"></div>
+           <h2>The Banes</h2>
+           <p>Photographer / Live Music Shoot</p>
+         </div>
+        </div>
+
+        <div class="image-holder">
+         <img src="images/film-tv/21-Last-Days-of-Disco.jpeg">
+         <div class="text-card">
+           <div class="text-card-background"></div>
+           <h2>Last Days of Disco</h2>
+           <p>Studio Director for ‘as live’ performance</p>
+         </div>
+        </div>
+
+        <!-- Row 8-->
+          <div class="image-holder">
+           <img src="images/film-tv/22-Mobo-Awards-Logo.jpeg">
+           <div class="text-card">
+             <div class="text-card-background"></div>
+             <h2>Mobo Awards</h2>
+             <p>Production Runner</p>
+           </div>
+          </div>
+
+          <div class="image-holder">
+           <img src="images/film-tv/8-Schaefer-Mclean.jpeg">
+           <div class="text-card">
+             <div class="text-card-background"></div>
+             <h2>Schaefer Mclean</h2>
+             <p>Producer and 1st AD for online mini documentary on Bristol’s skate scene</p>
+           </div>
+          </div>
+
+          <div class="image-holder">
+           <img src="images/film-tv/27-YSTV.jpeg">
+           <div class="text-card">
+             <div class="text-card-background"></div>
+             <h2>YSTV</h2>
+             <p>Live Stream Director and on stage Camera Operator for York’s 12 Hour Music Festival</p>
+           </div>
+         </div>
+
+
+</div>
+</div>
+
+
+<div id="footer">
+  <div id="soc-icon-holder">
+
+ <a href="https://www.linkedin.com/in/rachael-sherlock-55058669" target="_blank">
+    <div id="linkedin-icon">
+         <svg enable-background="new 0 0 32 32"  overflow="visible" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path clip-rule="evenodd" d="M18.301,14.066v-0.045c-0.01,0.016-0.021,0.031-0.03,0.045H18.301z" fill-rule="evenodd"/><path clip-rule="evenodd" d="M30,0h-1.048H3.048H2C0.896,0,0,0.895,0,2v1.047v25.906V30c0,1.105,0.896,2,2,2  h1.048h25.904H30c1.104,0,2-0.895,2-2v-1.047V3.047V2C32,0.895,31.104,0,30,0z M27.417,25.938h-4.509v-7.191  c0-1.805-0.513-3.039-2.144-3.039c-1.247,0-1.991,0.832-2.315,1.635c-0.119,0.287-0.148,0.688-0.148,1.09v7.506h-4.655  c0,0,0.06-12.559,0-13.82h4.655v1.904c0.598-0.914,1.668-2.221,4.065-2.221c2.967,0,5.051,2.305,5.051,6.432V25.938z M8.148,6.098  c1.385,0,2.238,1,2.266,2.312c0,1.283-0.881,2.312-2.292,2.312H8.096c-1.36,0-2.238-1.029-2.238-2.312  C5.857,7.098,6.762,6.098,8.148,6.098z M10.67,12.17v13.768H6.096V12.17H10.67z" fill-rule="evenodd"/>
+         </svg>
+    </div>
+</a>
+
+<a href="https://www.instagram.com/rachael_sherlock/">
+     <div id="instagram-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+        	<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+        		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+        	<circle cx="41.5" cy="16.4" r="2.9"/>
+        	<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+        		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+        		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+        		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+     </div>
+</a>
+
+  </div>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript" src="js/responsive-menu.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+
+<script>
+
+
+////////////////////////
+// Reposition open window video holder on window resize
+
+	// function openVideoPosition(ctaRow, ctaTrigger){
+
+  function openVideoPosition(ctaRow, ctaTrigger){
+
+	  var panelTrigger = ctaTrigger; //pass parameters into new variables
+	  var panelRow  = ctaRow; //pass parameters into new variables
+    // console.log(panelTrigger);
+    // console.log(panelRow);
+
+	  /* Get values from panel position function */
+    var panelPositionValues = getPanelPosition(panelTrigger, panelRow);
+		var panelIndex = panelPositionValues.panelIndex;
+		var ctaRow = panelPositionValues.ctaRow;
+	  var nodeListArray = panelPositionValues.nodeListArray;
+	  var galleryHolder = panelPositionValues.galleryHolder;
+
+    var getExisitingVideoHolder = document.getElementById('video-holder');
+
+	  var getViewportWidth = window.innerWidth;
+
+     if (getViewportWidth > 1050){
+       // Add Video holder full width
+
+       var imageHolderPosition = ctaRow * 3;
+       var nextSibing = nodeListArray[imageHolderPosition];
+
+       galleryHolder.insertBefore(getExisitingVideoHolder, nextSibing);
+
+     } else if (getViewportWidth < 1050 && getViewportWidth > 700){
+			    var numberOfPanels = nodeListArray.length;
+  			  var numberOfRows = numberOfPanels / 3;
+
+          var leftPanelArray = [1];
+          var leftPanelStartNumber = 1;
+
+    			for (var i = 0; i < numberOfRows - 1; i++){
+            leftPanelStartNumber += 3;
+            leftPanelArray.push(leftPanelStartNumber);
+          }
+
+          var findIndexOf = leftPanelArray.indexOf(panelIndex);
+
+          if (findIndexOf > -1){
+            console.log('itworks');
+            var getExisitingVideoHolder = document.getElementById('video-holder');
+
+            var imageHolderPosition = panelIndex;
+            var nextSibing = nodeListArray[imageHolderPosition];
+
+            galleryHolder.insertBefore(getExisitingVideoHolder, nextSibing);
+          }
+
+		}
+
+
+
+	}
+
+////////////////////////
+// Video Close button functionality
+
+   function closeVideoHolder(){
+       var closeTrigger = event.currentTarget;
+       var getVideoHolder = closeTrigger.parentNode;
+       var getParentHolder = getVideoHolder.parentNode;
+
+       getParentHolder.removeChild(getVideoHolder);
+
+
+	   // re-add click events when video holder is closed
+	   addEventListeners();
+  }
+
+
+////////////////////////
+// Add content to video holder
+
+function addVideoContent(){
+
+  var getObjectData = videos;
+
+  var getVideoHolderElement = document.getElementById('video-holder');
+  var iFrame = document.createElement('iframe');
+
+
+ // Get Video Content
+			var ctaTrigger = event.currentTarget;
+			var videoTitle = ctaTrigger.getAttribute("data-video-title");
+	        var getVidUrl = getObjectData.video[videoTitle].url;
+	        var getVidHeight = getObjectData.video[videoTitle].height;
+	        var getVidWidth = getObjectData.video[videoTitle].width;
+
+// Set Attributes
+	      iFrame.setAttribute('src', getVidUrl);
+	      iFrame.width = getVidWidth;
+	      iFrame.height = getVidHeight;
+	      iFrame.setAttribute('frameborder','0');
+
+	      getVideoHolderElement.appendChild(iFrame);
+}
+
+/////////////////////////
+function removeExistingPanelIdentifiers(){
+
+  var getIdentifiedPanels = document.getElementsByClassName('triggered');
+
+    if (getIdentifiedPanels.length >= 1){
+  	  for (var i = 0; i < getIdentifiedPanels.length; i++) {
+  		   getIdentifiedPanels[i].classList.remove('triggered');
+  		}
+     }
+
+}
+
+////////////////////////
+function makeVideoHolder() {
+   var newVideoHolder = document.createElement('div');
+   newVideoHolder.id = 'video-holder';
+
+   // Add close button
+   var newCloseButton = document.createElement('span');
+   newCloseButton.id = 'close-button';
+   newCloseButton.addEventListener("click", closeVideoHolder);
+
+   newVideoHolder.appendChild(newCloseButton);
+
+   return newVideoHolder;
+}
+
+
+////////////////////////
+
+function convertNodeListToArray(nodeList){
+  var imageHolderArray = [];
+      // iterate backwards
+      for (var i = nodeList.length >>> 0; i--;) {
+        imageHolderArray[i] = nodeList[i];
+      }
+   return imageHolderArray;
+
+}
+
+////////////////////////
+function getPanelPosition(panelTrigger, panelRow){
+
+
+		// Get Array of image panels
+		  var galleryHolder = panelTrigger.parentNode.parentNode.parentNode;
+		  var nodeList = galleryHolder.getElementsByClassName('image-holder');
+
+		  var nodeListArray = convertNodeListToArray(nodeList);
+
+    // Add identifying class to triggered container
+	  removeExistingPanelIdentifiers(); // remove prexisting identifiers
+      var mainContainer = panelTrigger.parentNode.parentNode;
+      mainContainer.classList.add('triggered');  // add identifying class to triggered container
+
+    // Get panel panelPosition
+      var panelNumber = 0;
+      var identifierClass = 'triggered';
+
+      for(var n = 0; n < nodeListArray.length; n++) {
+        if (nodeListArray[n].classList.contains(identifierClass) == true) {
+          panelNumber = n;
+          break;
+        }
+      }
+      var panelIndex = panelNumber + 1;
+
+	 return {
+		 ctaRow: panelRow,
+		 panelIndex: panelIndex,
+		 nodeListArray: nodeListArray,
+		 galleryHolder: galleryHolder
+	 };
+
+
+}
+
+////////////////////////
+
+function addVideoHolder(videoHolder, ctaTrigger, ctaRow){
+
+	var panelTrigger = ctaTrigger; //pass parameters into new variables
+	var panelRow  = ctaRow; //pass parameters into new variables
+
+
+  /* Get values from panel position function */
+     var panelPositionValues = getPanelPosition(panelTrigger, panelRow);
+
+		 var panelIndex = panelPositionValues.panelIndex;
+		 var ctaRow = panelPositionValues.ctaRow;
+	     var nodeListArray = panelPositionValues.nodeListArray;
+	     var galleryHolder = panelPositionValues.galleryHolder;
+
+    //// Add video holder in Responsive first breakpoint position ////
+       var getViewportWidth = window.innerWidth;
+
+	  if (getViewportWidth < 1050 && getViewportWidth > 700){
+		      var panelPosition = '';
+
+    		  //check if panel is on left or right hand side
+    		  if(panelIndex % 2 == 0){
+    			panelPosition = 'even';
+    		  } else if (panelIndex % 2 == 1){
+    			  panelPosition = 'odd';
+    		  }
+
+
+         // Panel position even is on right, odd is on left
+		     if(panelPosition == 'even'){
+           var imageHolderPosition = panelIndex;
+           var nextSibing = nodeListArray[imageHolderPosition];
+
+           galleryHolder.insertBefore(videoHolder, nextSibing);
+
+         } else if(panelPosition == 'odd'){
+           var imageHolderPosition = panelIndex;
+           var nextSibing = nodeListArray[imageHolderPosition + 1];
+
+           galleryHolder.insertBefore(videoHolder, nextSibing);
+         }
+
+
+	  } else if (getViewportWidth <= 700){
+      var imageHolderPosition = panelIndex;
+      var nextSibing = nodeListArray[imageHolderPosition];
+
+      galleryHolder.insertBefore(videoHolder, nextSibing);
+
+    } else {
+  	  // Add Video holder full width
+  		var imageHolderPosition = ctaRow * 3;
+  		var nextSibing = nodeListArray[imageHolderPosition];
+
+  		galleryHolder.insertBefore(videoHolder, nextSibing);
+  }
+
+}
+
+////////////////////////
+
+// Reveal video holder function
+	function revealVideoHolder(){
+
+	// Get triggered cta row
+		var ctaTrigger = event.currentTarget;
+		var ctaRow = ctaTrigger.dataset.row;
+
+    // make and position video container
+	    var videoHolder = makeVideoHolder();
+		  addVideoHolder(videoHolder, ctaTrigger, ctaRow);
+
+   // add content
+    addVideoContent();
+
+    //remove click event
+     var getLiveCtas = document.getElementsByClassName('vcta');
+     for(var i = 0; i < getLiveCtas.length; i ++){
+       getLiveCtas[i].removeEventListener("click", revealVideoHolder);
+     };
+
+
+
+    // Add window resize listener
+    window.onresize = function(){
+      openVideoPosition(ctaRow, ctaTrigger);
+    };
+
+
+		//remove click event
+		//  var getAddedVideoHolder = document.getElementById('video-holder');
+		//  if (getAddedVideoHolder) {
+		// 	event.currentTarget.removeEventListener("click", revealVideoHolder);
+    // };
+
+	};
+
+////////
+function addEventListeners(){
+  // Add cta event listener
+    var getVideoCta = document.getElementsByClassName('vcta');
+
+  	for(var i = 0; i < getVideoCta.length; i ++){
+  		getVideoCta[i].addEventListener("click", revealVideoHolder);
+  	}
+
+}
+
+addEventListeners();
+
+
+
+</script>
+</html>

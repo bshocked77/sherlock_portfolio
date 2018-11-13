@@ -1,0 +1,39 @@
+/* Footer */
+
+#footer {
+  width: 100%;
+  background-color: #619595;
+  height: 40px;
+  text-align: right;
+}
+
+#soc-icon-holder {
+  padding-top: 5px;
+  padding-right: 12px;
+}
+
+/* Footer Icons */
+
+#instagram-icon {
+  width: 29px;
+  height: 29px;
+  display: inline-block;
+}
+
+#instagram-icon svg {
+  color: #ffffff;
+  fill: currentColor;
+}
+
+
+#linkedin-icon{
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  padding-right: 6px;
+}
+
+#linkedin-icon svg {
+  color: #ffffff;
+  fill: currentColor;
+}

@@ -1,0 +1,197 @@
+/* Main Menu Styling */
+
+  #main-menu {
+    width: 100%;
+    height: 50px;
+    z-index: 20;
+    position: fixed;
+    }
+
+  .scrl-menu{
+    background-color: rgba(68,68,68,0.9);
+  }
+
+.fixed-menu-pad {
+  padding-top: 8px !important;
+}
+
+  #main-menu ul{
+    margin: auto;
+    padding-left: 0px;
+    padding-top: 10px;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    }
+
+
+  #main-menu li {
+    color: #f9eb1b;
+    display: inline-block;
+    margin-right: 75px;
+    padding: 5px 7px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px #38a39a;
+    letter-spacing: 5px;
+    }
+
+#main-menu li.active{
+  border-bottom: 4px solid #f9f9f9;
+  color: #f9f9f9;
+}
+
+    li#button-three {
+      margin-right: 30px;
+    }
+
+  .fixed {
+    position: fixed;
+    margin-top: -178px;
+  }
+
+  #main-menu #home-button{
+   color: #38a39a;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   font-family: 'Roboto', sans-serif;
+   font-size: 23px;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 5px;
+   float: left;
+   margin-top: 13px;
+   margin-left: 30px;
+   text-decoration: none;
+  }
+
+  #home-button.menu-button-hide{
+    display: none;
+  }
+
+
+/*==================================================================*/
+
+  /* Mobile Menu Icon */
+
+
+  	#mobile-menu-icon {
+  	 display: none;
+  	 padding-right: 20px;
+       padding-top: 6px;
+  	}
+
+  	#mobile-menu-icon div{
+      width: 35px;
+      height: 5px;
+      background-color: #f9eb1b;
+      margin: 6px 0;
+  	border-radius: 5px;
+  	}
+
+
+  /* Mobile Menu Display Media Queries */
+
+
+  	@media only screen and (max-width: 1125px) {
+      #main-menu li{
+        margin-right: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 1050px) {
+      li#button-three {
+        margin-right: 0px;
+      }
+    }
+
+  	@media only screen and (max-width: 1020px) {
+		
+		
+		#main-menu li.active{
+		  border-bottom: none;
+		  color: #f9f9f9;
+		}
+
+  		ul#button-list{
+  		  display: none;
+  		}
+
+  	  #mobile-menu-icon{
+  		float: right;
+  		display: inline-block;
+  	  }
+
+      .scrl-menu{
+       background-color: rgba(68,68,68,1);
+      }
+}
+
+  @media only screen and (max-width: 400px) {
+    #main-menu #home-button {
+    font-size: 17px;
+    letter-spacing: 4px;
+    margin-top: 16px;
+    margin-left: 15px;
+  }
+
+  }
+
+
+
+  /* Display Responsive Menu Buttons - JS ADDED STYLES */
+
+
+  	ul#button-list.responsive {
+  	  display: block;
+  	  width: 100%;
+  	  padding-top: 0px;
+  	  background-color: #333333;
+  	}
+
+
+    ul#button-list.responsive li {
+  	  display: block;
+  	  text-align: left;
+  	  width: 100%;
+  	  padding-left: 30px;
+  	}
+
+    @media only screen and (max-width: 400px) {
+      ul#button-list.responsive li {
+       padding-left: 15px;
+    }
+}
+
+    ul#button-list.responsive.vid-menu {
+       background: none;
+       padding-right: 18px;
+    }
+
+    ul#button-list.responsive.vid-menu li {
+      display: block;
+      text-align: right;
+      width: 100%;
+      padding-left: 0px;
+    }
+
+
+
+/* END */
+/* Content Pages */
+#main-menu.content-page{
+  position: static;
+  height: 40px;
+}
+ #main-menu.content-page #home-button{
+  margin-top: 17px;
+}
+
+ #main-menu.content-page #mobile-menu-icon{
+ margin-top: 6px;
+}
+
+#main-menu.content-page ul#button-list.responsive{
+  margin-top: 8px;
+}

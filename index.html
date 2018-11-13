@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="menu-styling.css">
+<link rel="stylesheet" href="font-styling.css">
+<link rel="stylesheet" href="footer.css">
+
+
+
+<style>
+
+    body{
+      margin: 0px;
+    }
+
+
+/* CTA Styling */
+
+#cta{
+    padding: 10px 1px;
+    background-color: #38a39a;
+    width: 149px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px #faec1b;
+}
+
+#cta:hover {
+  background-color: #549c96b5;
+}
+
+#cta:active {
+  transform: translateY(4px);
+}
+  /* Hero Slice */
+
+    #main-hero-slice{
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      min-height: 400px;
+      overflow: hidden;
+    }
+
+    #hero-intro-paragraph {
+      position: absolute;
+      top: 28%;
+      left: 12%;
+      width: 500px;
+      border-radius: 2px;
+    }
+
+    #hero-intro-paragraph h1{
+      margin: 16px 0px 0px 13px;
+      font-weight: 900;
+      font-size: 95px;
+      color: #38a39a;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    }
+
+    h1#top-name{
+    margin-bottom: -38px;
+    letter-spacing: 14.5px;
+    }
+
+  #hero-intro-paragraph p{
+    color: #faec1b;
+    width: 543px;
+    padding: 0px 0px 7px 7px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 0px;
+    letter-spacing: 3.5px;
+  }
+
+
+  .fullscreen-bg__video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+}
+
+ /* Video Resizing */
+
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;  /*actually taller than viewport*/
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: auto; /* actually wider than viewport */
+    height: 100%;
+  }
+}
+
+
+
+  /* Body Slices */
+
+  .slice {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .content-holder{
+    margin: auto;
+    }
+
+
+/* Slice One Content */
+
+#slice-one-text{
+  width: 470px;
+  margin: auto;
+  text-align: center;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+  #slice-one h2{
+    text-align: center;
+    margin-top: 40px;
+  }
+
+
+/* Slice Two Content */
+
+  #slice-two{
+    height: auto;
+    border-top: 1px solid #b6afaf;
+    }
+
+#slice-two-text{
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+  #slice-two h2{
+    text-align: center;
+    margin-top: 40px;
+  }
+
+
+/* Slice Two Gallery Styling */
+
+  #hp-gallery-container{
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .hp-gallery-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 24%;
+    height: auto;
+    margin: 1%;
+  }
+
+  .hp-gallery-item img{
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .hp-gallery-item {
+      flex-basis:40%;
+    }
+
+    #hp-gallery-container{
+      width: 90%;
+    }
+
+ }
+
+    @media only screen and (max-width: 480px) {
+      .hp-gallery-item {
+        flex-basis:55%;
+      }
+  }
+
+
+/* Homepage Text Mobile Resizing */
+
+
+@media only screen and (max-height: 355px) {
+  #hero-intro-paragraph{
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #hero-intro-paragraph{
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #hero-intro-paragraph h1{
+    margin-left: 0px;
+  }
+
+  #hero-intro-paragraph p{
+    padding-left:0px;
+    margin-left: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 545px) {
+
+  #hero-intro-paragraph{
+    width: 390px;
+  }
+  #hero-intro-paragraph h1{
+    font-size: 68px;
+  }
+
+  #hero-intro-paragraph p{
+   font-size: 18px
+  }
+
+}
+
+
+@media only screen and (max-width: 510px) {
+  #slice-one-text {
+    width: unset;
+    padding: 0px 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #hero-intro-paragraph{
+    width: 287px;
+  }
+  #hero-intro-paragraph h1{
+    font-size: 50px;
+  }
+
+  h1#top-name {
+    margin-bottom: -30px;
+    letter-spacing: 11.5px;
+  }
+
+  #hero-intro-paragraph p{
+   font-size: 20px;
+   text-align: center;
+   width: unset;
+  }
+}
+
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+<div id="main-menu">
+
+  <a href="index.html" id="home-button" class="menu-button-hide">Rachael Sherlock</a>
+
+  	<div id="mobile-menu-icon">
+
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+   <ul id="button-list" class="vid-menu">
+     <a href="film-tv_v5.html"><li id="button-one">Film & TV</li></a>
+     <a href="skateboarding.html"><li id="button-two">Skateboarding</li></a>
+     <a href="about-me_v2.html"><li id="button-three">About Me</li></a>
+   </ul>
+
+
+</div>
+
+<div id="main-hero-slice">
+
+
+      <video poster="images/homepage-images/video-cover-image.jpg" loop muted autoplay id="hero-full-video" class="fullscreen-bg__video">
+        <source src="intro-videos/homepage-intro-vid.mp4" type="video/mp4">
+     </video>
+
+
+
+  <div id="hero-intro-paragraph">
+    <h1 id="top-name">Rachael</h1>
+    <h1>Sherlock</h1>
+    <p>Film maker & aspiring TV director</p>
+  </div>
+
+</div>
+
+<div id="slice-one" class="slice">
+  <div class="content-holder">
+    <h2>Hi, I&#8242;m Rachael.</h2>
+    <p id="slice-one-text">
+      I'm a film maker and fully qualified Senior Studio Technican at ITV.<br> I love to totally immerse myself in new and exciting projects, finding a healthy balance between producing my own independent content and working with other creatives and directors. In the future I hope to direct live events, sports and musical productions.</p>
+    <a href="film-tv_v5.html"><div id="cta">VIEW PORTFOLIO</div></a>
+
+  </div>
+</div>
+
+<div id="slice-two" class="slice">
+  <h2>My Life</h2>
+
+  <div id="hp-gallery-container">
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-one.jpg">
+    </div>
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-two.jpg">
+    </div>
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-three.jpg">
+    </div>
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-four.jpg">
+    </div>
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-five.jpg">
+    </div>
+    <div class="hp-gallery-item">
+      <img src="images/homepage-images/hp-gallery-six.jpg">
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+<div id="footer">
+  <div id="soc-icon-holder">
+
+ <a href="https://www.linkedin.com/in/rachael-sherlock-55058669" target="_blank">
+    <div id="linkedin-icon">
+         <svg enable-background="new 0 0 32 32"  overflow="visible" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path clip-rule="evenodd" d="M18.301,14.066v-0.045c-0.01,0.016-0.021,0.031-0.03,0.045H18.301z" fill-rule="evenodd"/><path clip-rule="evenodd" d="M30,0h-1.048H3.048H2C0.896,0,0,0.895,0,2v1.047v25.906V30c0,1.105,0.896,2,2,2  h1.048h25.904H30c1.104,0,2-0.895,2-2v-1.047V3.047V2C32,0.895,31.104,0,30,0z M27.417,25.938h-4.509v-7.191  c0-1.805-0.513-3.039-2.144-3.039c-1.247,0-1.991,0.832-2.315,1.635c-0.119,0.287-0.148,0.688-0.148,1.09v7.506h-4.655  c0,0,0.06-12.559,0-13.82h4.655v1.904c0.598-0.914,1.668-2.221,4.065-2.221c2.967,0,5.051,2.305,5.051,6.432V25.938z M8.148,6.098  c1.385,0,2.238,1,2.266,2.312c0,1.283-0.881,2.312-2.292,2.312H8.096c-1.36,0-2.238-1.029-2.238-2.312  C5.857,7.098,6.762,6.098,8.148,6.098z M10.67,12.17v13.768H6.096V12.17H10.67z" fill-rule="evenodd"/>
+         </svg>
+    </div>
+  </a>
+
+<a href="https://www.instagram.com/rachael_sherlock/">
+     <div id="instagram-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+        	<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+        		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+        	<circle cx="41.5" cy="16.4" r="2.9"/>
+        	<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+        		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+        		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+        		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+     </div>
+</a>
+
+  </div>
+</div>
+
+
+
+</body>
+
+<script>
+
+
+
+
+// FIXED HEADER
+// make this work with this
+// document.getElementById('hero-intro-paragraph').getBoundingClientRect().y;
+
+
+  function fixedMenu() {
+
+    if (window.pageYOffset > 150) {
+      document.getElementById('main-menu').classList.add('scrl-menu');
+      document.getElementById('button-list').classList.add('fixed-menu-pad');
+      document.getElementById('button-list').classList.remove('mobile-scrl');
+      document.getElementById('button-list').classList.remove('vid-menu');
+      document.getElementById('home-button').classList.remove('menu-button-hide');
+    } else if (window.pageYOffset < 350) {
+      document.getElementById('main-menu').classList.remove('scrl-menu');
+      document.getElementById('button-list').classList.remove('fixed-menu-pad');
+      document.getElementById('button-list').classList.add('vid-menu');
+      document.getElementById('button-list').classList.add('mobile-scrl');
+      document.getElementById('home-button').classList.add('menu-button-hide');
+    }
+
+
+  }
+
+
+  window.onscroll = fixedMenu;
+
+
+
+</script>
+
+
+</html>
+
+<script type="text/javascript" src="js/responsive-menu.js"></script>

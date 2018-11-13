@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text|Roboto:400,900');
+
+a {
+  text-decoration: none;
+}
+p a {
+  color: #42a39a;
+  text-decoration: underline;
+}
+  /* Font Styling */
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+#cta{
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  }
+
+
+/* Portfolio Gallery Text Card Styling */
+
+
+/* About Me Header */
+
+#title-banner h1{
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

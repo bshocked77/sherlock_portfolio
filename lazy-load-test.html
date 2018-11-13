@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="menu-styling.css">
+<link rel="stylesheet" href="font-styling.css">
+<link rel="stylesheet" href="footer.css">
+
+<style>
+
+body{
+  background-color: #444444;
+  margin: 0px;
+  }
+
+#main-menu {
+  position: static;
+  }
+
+
+
+/* Gallery Portfolio Grid */
+
+#gallery-container{
+  margin-top: 15px;
+  clear:both;
+  }
+
+  #gallery-wrapper{
+    display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  }
+
+  #gallery-wrapper img{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  #gallery-wrapper .image-holder{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 31%;
+    height: auto;
+    margin: 0.25%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .text-card{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 100%;
+  }
+
+  .text-card .text-card-background{
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   background-size: cover;
+   opacity: 0.7;
+  }
+
+  .text-card p{
+   color: #ffffff;
+  font-size: 20px;
+  }
+
+  .card-reveal{
+    top: 0px;
+  }
+
+/* Grid Media Queries */
+
+@media only screen and (max-width: 1050px) {
+  #gallery-wrapper .image-holder{
+    flex-basis: 35%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #gallery-wrapper .image-holder{
+    flex-basis: 50%;
+  }
+}
+
+
+/* Font Styling on Gallery Text Card */
+
+  .text-card h2{
+    color: #ffffff;
+    font-weight: 200;
+    margin: auto;
+    max-width: 350px;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 32%;
+    left: 0px;
+    right: 0px;
+  }
+
+  .text-card h3{
+    color: #ffffff;
+    font-weight: 200;
+    margin: auto;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    font-size: 22px;
+  }
+
+</style>
+</head>
+
+
+
+
+<body>
+
+<!--
+<div id="main-menu" class="scrl-menu f-tv">
+
+   <ul id="button-list">
+     <a href="index.html"><li id="home-button">Rachael Sherlock</li></a>
+     <a href="film-tv_v2.html"><li id="button-one">Film & TV</li></a>
+     <li id="button-two">Skateboarding</li>
+     <a href="about-me.html"><li id="button-three">About Me</li></a>
+   </ul>
+</div>
+-->
+
+
+<div id="gallery-container">
+  <div id="gallery-wrapper">
+
+
+ <!-- Row 1 -->
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Urban Hippie Collective</h2>
+       <h3>Highlights Promo Video</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>This Morning</h2>
+       <h3>Ped Operator for Hairy Bikers Demo Item</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Super Birds</h2>
+       <h3>Live Music Shoot</h3>
+     </div>
+    </div>
+
+ <!-- Row 2 -->
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Lorraine Show</h2>
+       <h3>Senior Studio Technician</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Skate Workshop</h2>
+       <h3>Nike SB</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Camp VC</h2>
+       <h3>Instagram Highlights Video</h3>
+      </div>
+    </div>
+
+
+<!--========== IMAGES TO USE LAZY LOAD ========== -->
+
+ <!-- Row 3 -->
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Girl Skate Competition</h2>
+       <h3>Pioneer Skatepark</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>The Banes</h2>
+       <h3>Live Music Shoot</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Good Morning Britain</h2>
+       <h3>Senior Studio Technician</h3>
+     </div>
+    </div>
+
+
+  <!-- Row 4-->
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Introducing The Girls Team</h2>
+       <h3>Three Amigos Skateshop</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Loose Women</h2>
+       <h3>Cam 6 Operator</h3>
+     </div>
+    </div>
+
+    <div class="image-holder">
+     <img class="lazy" src="" data-src="images/film-tv/Urban-Hippie-Collective.jpg">
+     <div class="text-card">
+       <div class="text-card-background"></div>
+       <h2>Girls Jam</h2>
+       <h3>House Of Vans</h3>
+     </div>
+    </div>
+
+</div>
+</div>
+
+
+<div id="footer">
+  <div id="soc-icon-holder">
+
+    <div id="linkedin-icon">
+         <svg enable-background="new 0 0 32 32"  overflow="visible" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path clip-rule="evenodd" d="M18.301,14.066v-0.045c-0.01,0.016-0.021,0.031-0.03,0.045H18.301z" fill-rule="evenodd"/><path clip-rule="evenodd" d="M30,0h-1.048H3.048H2C0.896,0,0,0.895,0,2v1.047v25.906V30c0,1.105,0.896,2,2,2  h1.048h25.904H30c1.104,0,2-0.895,2-2v-1.047V3.047V2C32,0.895,31.104,0,30,0z M27.417,25.938h-4.509v-7.191  c0-1.805-0.513-3.039-2.144-3.039c-1.247,0-1.991,0.832-2.315,1.635c-0.119,0.287-0.148,0.688-0.148,1.09v7.506h-4.655  c0,0,0.06-12.559,0-13.82h4.655v1.904c0.598-0.914,1.668-2.221,4.065-2.221c2.967,0,5.051,2.305,5.051,6.432V25.938z M8.148,6.098  c1.385,0,2.238,1,2.266,2.312c0,1.283-0.881,2.312-2.292,2.312H8.096c-1.36,0-2.238-1.029-2.238-2.312  C5.857,7.098,6.762,6.098,8.148,6.098z M10.67,12.17v13.768H6.096V12.17H10.67z" fill-rule="evenodd"/>
+         </svg>
+    </div>
+
+     <div id="instagram-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+        	<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+        		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+        	<circle cx="41.5" cy="16.4" r="2.9"/>
+        	<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+        		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+        		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+        		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+     </div>
+
+
+  </div>
+</div>
+
+
+</body>
+
+<script>
+
+
+/*==== LAZY LOAD FUNCTIONALITY ====*/
+
+function lazyLoad(){
+	var lazy = document.getElementsByClassName('lazy');
+
+	for(var i = 0; i< lazy.length; i++){
+	 lazy[i].src = lazy[i].getAttribute('data-src');
+	}
+}
+
+ // Load first 6 images before lazy load runs
+
+
+var imageHolders = document.getElementsByClassName('image-holder');
+	var count = 0;
+	var imagesLoaded = false;
+	var img = '';
+
+	for(var i = 0; i < 6; i++){
+		console.log(i);
+		img = imageHolders[i].getElementsByTagName('img');
+		img[0].addEventListener("load", function(){
+			console.log('image loaded', i);
+				count++;
+				if(count === 6){
+					// load other images
+					lazyLoad();
+				}
+			}
+		);
+
+	}
+
+
+
+
+
+
+
+
+/*==== END ====*/
+
+
+
+/*==== GALLERY CARD FUNCTIONALITY ====*/
+
+var getImageHolder = document.getElementsByClassName('image-holder');
+var getTextCard = document.getElementsByClassName('text-card');
+
+function revealTextCard(e){
+      var parentElement = e.currentTarget;
+      var childElement = parentElement.children[1];
+     childElement.classList.add('card-reveal');
+    }
+
+function hideTextCard(e){
+  var element = e.currentTarget;
+
+  if (element.classList.contains('card-reveal') == true){
+   element.classList.remove('card-reveal');
+  }
+}
+
+
+//Adds hover on event listener on image
+for (var i = 0; i < getImageHolder.length; i++) {
+    getImageHolder[i].addEventListener("mouseover", revealTextCard);
+  }
+
+//Adds hover off event listener on text card
+for (var i = 0; i < getImageHolder.length; i++) {
+    getTextCard[i].addEventListener("mouseout", hideTextCard);
+  }
+
+/*==== END ====*/
+
+</script>
+</html>

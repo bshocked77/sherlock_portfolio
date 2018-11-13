@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="menu-styling.css">
+<link rel="stylesheet" href="font-styling.css">
+<link rel="stylesheet" href="footer.css">
+
+<style>
+
+body{
+  background-color: #444444;
+  margin: 0px;
+  }
+
+#main-menu {
+  position: static;
+  }
+
+/* Image Banner */
+
+#full-width-banner{
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  background-image: url("images/about-me/Header-adjusted.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Title Banner */
+
+#title-banner{
+  text-align: center;
+  width: 65%;
+  margin: auto;
+  background-color: #38a39a;
+  position: absolute;
+  left: 0;
+  top: 164px;
+  right: 0;
+  color: #ffffff;
+}
+
+
+#title-banner{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Contact Styling */
+
+#contact-wrapper{
+  text-align: center;
+  position: static;
+  padding-top: 45px;
+}
+
+#contact-wrapper a p{
+  color: black;
+  letter-spacing: 2px;
+  margin: auto;
+  padding-bottom: 4px;
+  width: 134px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+#contact-wrapper a p:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/* Body Content */
+
+#am-content-wrapper{
+  background-color: #ffffff;
+}
+
+#am-text-wrapper, #am-img-wrapper{
+  display: inline-block;
+}
+
+#am-img-wrapper{
+  width: 45%;
+  float: left;
+}
+
+#am-img-wrapper img{
+  width: 82%;
+  height: auto;
+  max-height: 548px;
+  max-width: 410px;
+  margin: 30px auto;
+  display: block;
+
+}
+
+#am-text-wrapper{
+  width: 55%;
+  margin-bottom: 70px;
+  max-width: 870px;
+}
+
+#am-text-wrapper p.quote{
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: 290px;
+  padding-top: 40px;
+}
+
+#am-text-wrapper #body-copy p.quote{
+  width: 428px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#am-text-wrapper p#first-para{
+      background-color: #c1dcda;
+      border-radius: 6px;
+      padding: 15px 11px;
+      margin-top: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+}
+
+#am-text-wrapper #body-copy{
+  width: 85%;
+  padding-left: 8%;
+}
+#am-text-wrapper p:first-of-type{
+  margin-top: 10px;
+}
+
+#am-text-wrapper p{
+  padding: 5px 0px 5px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#info-box{
+    border: 1px dashed #a7a7a7;
+    margin-top: 15px;
+    padding: 0px 25px 13px;
+    background-color: #e2e2e2;
+  }
+
+/* About Me Media Queries */
+
+@media only screen and (max-width: 900px) {
+
+    #am-img-wrapper{
+      float: none;
+      width: 100%;
+    }
+
+    #am-text-wrapper {
+    width: 100%;
+   }
+
+   #am-text-wrapper p.quote {
+     padding-top: 0px;
+   }
+
+   #am-text-wrapper #body-copy {
+    width: 85%;
+    margin: auto;
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+
+  #am-text-wrapper #body-copy p.quote {
+    width: 95%;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+
+  #title-banner {
+    width: 75%;
+  }
+
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+
+  <div id="main-menu" class="content-page">
+
+    <a href="index.html" id="home-button">Rachael Sherlock</a>
+
+    	<div id="mobile-menu-icon">
+
+  		<div></div>
+  		<div></div>
+  		<div></div>
+  	</div>
+
+     <ul id="button-list">
+       <a href="film-tv_v5.html"><li id="button-one">Film & TV</li></a>
+       <a href="skateboarding.html"><li id="button-two">Skateboarding</li></a>
+       <a href="about-me_v2.html"><li id="button-three" class="active">About Me</li></a>
+     </ul>
+
+
+  </div>
+
+<div id="full-width-banner">
+</div>
+
+<div id="title-banner">
+  <h1>About Me</h1>
+</div>
+
+<div id="am-content-wrapper">
+
+  <div id="contact-wrapper">
+    <p>rachjohannalouise@gmail.com</p>
+    <a href="Rachael-Sherlock-CV.pdf">
+      <p>DOWNLOAD CV</p>
+    </a>
+  </div>
+
+  <div id="am-img-wrapper">
+    <img src="images/about-me/about-me-prof-pic-2.jpg">
+  </div>
+
+  <div id="am-text-wrapper">
+
+    <p class="quote">Described by BAFTA winning Patrick Titley as 	&lsquo;cool&rsquo;. </p>
+
+
+ <div id="body-copy">
+    <p id="first-para">Based in North London I have been working in television for 6 years on a range of different productions. My day to day work at ITV varies massively from assisting Sound, Lighting, Scenic and Camera departments. Ultimately my career ambitions would be to direct live events, and I’m passionate about working on independent freelance projects to develop my skills.</p>
+
+    <p>I first got into film when I joined a club at my local youth centre, attending workshops and gaining a place with TVYP at Bristol Endemol Studios. During my University years I created <a href="https://ystv.co.uk/watch/thesoundlab/">The Sound Lab</a> for YSTV and was part of the winning team that won Best Broadcaster at the National Student Television Awards 2012.</p>
+
+    <p class="quote">During the London 2012 Paralympic Games, I worked with for <a href="https://www.doneanddusted.com/">Done & Dusted</a> at the opening and closing ceremonies.</p>
+
+    <p>I joined Roll to Record at Elstree Studios and did my training to become a grade 5 operator for Big Brother, whilst at the same time freelancing in the ITV Breakfast Green Room. I then moved across to ITV completely to become a Studio Technician and have stayed with them throughout several changes, where I am now a Senior Studio Technician helping to oversee a team of multiskilled assistants. </p>
+
+  <div id="info-box">
+    <p>For small projects and freelance work I have my own audio visual equipment allowing me to be self-sufficient. I use a zoom H4n recorder with a radio mic to ensure the highest possible sound production values when working on smaller productions instead of relying on internal camera mics or small shotgun style mics.</p>
+
+    <p>I pride myself on having great interpersonal skills, useful for conducting interviews and dealing with a range of talent. I’m able to adapt daily depending on my role and team, and can also be a trusted self-shooter.</p>
+  </div>
+
+  </div>
+
+</div>
+
+<div id="footer">
+  <div id="soc-icon-holder">
+
+<a href="https://www.linkedin.com/in/rachael-sherlock-55058669" target="_blank">
+    <div id="linkedin-icon">
+         <svg enable-background="new 0 0 32 32"  overflow="visible" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path clip-rule="evenodd" d="M18.301,14.066v-0.045c-0.01,0.016-0.021,0.031-0.03,0.045H18.301z" fill-rule="evenodd"/><path clip-rule="evenodd" d="M30,0h-1.048H3.048H2C0.896,0,0,0.895,0,2v1.047v25.906V30c0,1.105,0.896,2,2,2  h1.048h25.904H30c1.104,0,2-0.895,2-2v-1.047V3.047V2C32,0.895,31.104,0,30,0z M27.417,25.938h-4.509v-7.191  c0-1.805-0.513-3.039-2.144-3.039c-1.247,0-1.991,0.832-2.315,1.635c-0.119,0.287-0.148,0.688-0.148,1.09v7.506h-4.655  c0,0,0.06-12.559,0-13.82h4.655v1.904c0.598-0.914,1.668-2.221,4.065-2.221c2.967,0,5.051,2.305,5.051,6.432V25.938z M8.148,6.098  c1.385,0,2.238,1,2.266,2.312c0,1.283-0.881,2.312-2.292,2.312H8.096c-1.36,0-2.238-1.029-2.238-2.312  C5.857,7.098,6.762,6.098,8.148,6.098z M10.67,12.17v13.768H6.096V12.17H10.67z" fill-rule="evenodd"/>
+         </svg>
+    </div>
+</a>
+
+<a href="https://www.instagram.com/rachael_sherlock/">
+     <div id="instagram-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+        	<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+        		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+        	<circle cx="41.5" cy="16.4" r="2.9"/>
+        	<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+        		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+        		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+        		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+     </div>
+</a>
+
+  </div>
+</div>
+
+</body>
+
+
+</html>
+<script type="text/javascript" src="js/responsive-menu.js"></script>

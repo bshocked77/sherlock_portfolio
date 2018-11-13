@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="menu-styling.css">
+<link rel="stylesheet" href="font-styling.css">
+<link rel="stylesheet" href="footer.css">
+
+<style>
+
+body{
+  margin: 0px;
+  background-color: #444444;
+}
+
+/* Body Slices */
+
+.slice {
+  width: 100%;
+  height: auto;
+}
+
+
+.content-holder{
+  margin: auto;
+  }
+
+/* Intro Paragraph */
+
+ #intro-para {
+   background-color: #ffffff;
+   clear: both;
+   text-align: center;
+   padding-top: 20px;
+   margin-top: 18px;
+   padding-bottom: 14px;
+ }
+
+ #intro-para .content-holder{
+   width:51%;
+ }
+
+#intro-para h2{
+  display: none;
+}
+/*-- Mobie Styling --*/
+
+@media only screen and (max-width: 1020px) {
+    #intro-para .content-holder {
+      width: 70%;
+  }
+
+  #intro-para h2{
+    display: block;
+  }
+
+}
+
+
+@media only screen and (max-width: 410px) {
+    #intro-para .content-holder {
+      width: 90%;
+  }
+}
+
+
+/* Info gallery Flexbox */
+
+#info-gallery{
+  background-color: #ffffff;
+  width: 100%;
+
+}
+
+#info-gallery .gallery-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 92%;
+  margin: auto;
+}
+
+.info-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 22%;
+  height: auto;
+  margin: 1%;
+}
+
+.info-container img{
+  width: 100%;
+  height: auto;
+}
+
+/* Info Gallery Styling */
+
+.gallery-row h2{
+  font-size: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.gallery-row.row-two h2{
+  margin-top: 0px;
+}
+
+p.credit {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 0px 0px 1px;
+}
+
+p.info-copy {
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+/* Skateboarding Gallery Resizing */
+
+
+@media only screen and (max-width: 1005px) {
+    .gallery-row h2 {
+      font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .info-container {
+      flex-basis: 33%;
+      margin: 0.6% 3%;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .info-container {
+      flex-basis: 33%;
+      margin: 1%;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .info-container {
+      flex-basis: 55%;
+      margin: 1% 6%;
+  }
+}
+
+/* Video Slice */
+
+.video-slice{
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 30px;
+}
+
+.video-slice.vlogs{
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+
+.video-slice h2{
+  margin: auto;
+  width: 738px;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.video-slice.vlogs h2{
+  text-align: center;
+}
+
+.video-slice h2:nth-of-type(2){
+      padding-top: 60px;
+}
+
+.video-slice p{
+  margin: auto;
+  width: 734px;
+  padding-top: 7px;
+}
+
+.video-slice.vlogs p{
+  text-align: center;
+}
+
+.video-slice #big-video{
+  width: 740px;
+  margin: auto;
+  display: block;
+}
+
+.video-slice #video-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 92%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+#video-row .video-container{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 22%;
+  height: auto;
+  margin: 1%;
+}
+
+#video-row h3{
+  margin-bottom: 8px;
+}
+
+.video-container img{
+  width: 100%;
+  height: auto;
+}
+
+#video-row p.info-copy{
+  width: auto;
+  padding-top: 12px;
+}
+
+
+/* YouTube Videos Responsive */
+
+.YT-container {
+position: relative;
+padding-bottom: 48.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.YT-container iframe,
+.YT-container object,
+.YT-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+
+
+/* Video Gallery Resizing */
+
+@media only screen and (max-width: 825px) {
+
+  .video-slice h2 {
+    text-align: center;
+    width: auto;
+  }
+
+  .video-slice #big-video{
+    width: 90%;
+  }
+
+  .video-slice p {
+     text-align: center;
+     margin: auto;
+     width: 74%;
+     padding-top: 7px;
+ }
+
+ .video-slice p br{
+   display: none;
+ }
+  #video-row .video-container {
+      flex-basis: 52%;
+  }
+
+  .video-slice #video-row {
+      width: 63%;
+  }
+
+  #video-row p.info-copy{
+    padding-bottom: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .video-slice #video-row {
+      width: 80%;
+  }
+}
+
+  @media only screen and (max-width: 350px) {
+    .info-container {
+        flex-basis: 49%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div id="main-menu" class="content-page">
+
+  <a href="index.html" id="home-button">Rachael Sherlock</a>
+
+  	<div id="mobile-menu-icon">
+
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+   <ul id="button-list">
+     <a href="film-tv_v5.html"><li id="button-one">Film & TV</li></a>
+     <a href="skateboarding.html"><li id="button-two" class="active">Skateboarding</li></a>
+     <a href="about-me_v2.html"><li id="button-three">About Me</li></a>
+   </ul>
+
+
+</div>
+
+<div id="intro-para" class="slice">
+  <div class="content-holder">
+    <h2>Skateboarding</h2>
+    <p id="slice-one-text">My passion for skateboarding has led me to work with major brands, companies and charities across the globe both as a film maker and skateboarder. I’ve also taught at events for Vans and Nike SB as a skateboard instructor. I use the power of film to showcase the female skateboarding scene and challenge a male dominated industry.</p>
+  </div>
+</div>
+
+<div id="info-gallery">
+
+  <div class="gallery-row">
+
+    <div class="info-container">
+      <h2>SkatePal</h2>
+      <img src="images/skateboarding/Palestine.jpg">
+      <p class="credit">West Bank, Palestine</p>
+      <p class="info-copy">Volunteered with <a href="http://www.skatepal.co.uk/">SkatePAL</a>, teaching skateboarding to young women and children in Palestine.</p>
+    </div>
+
+     <div class="info-container">
+       <h2>ASOS</h2>
+       <img src="images/skateboarding/ASOS-Shoot.jpg">
+       <p class="credit">Photo: @vivigomez12</p>
+       <p class="info-copy">Appeared in the ASOS Summer magazine as part of a feature on <a href="http://nefariousskate.co.uk/">Nefarious</a> Skate Crew.</p>
+    </div>
+
+    <div class="info-container">
+      <h2>SPECSAVERS</h2>
+      <img src="images/skateboarding/Specsavers.jpg">
+      <p class="credit">Ali Fearnley Casting</p>
+      <p class="info-copy">Featured as a BMX rider in a Specsavers commercial showcasing action sports.</p>
+    </div>
+
+    <div class="info-container">
+      <h2>AMERICAN EAGLE</h2>
+      <img src="images/skateboarding/American-Eagle.jpg">
+      <p class="credit">Photo: @Oliviabohac</p>
+      <p class="info-copy">Shot a small editorial for American Eagle, modelling their high performance denim for the #AEOJeansEvolution campaign.</p>
+   </div>
+
+ </div>
+
+   <div class="gallery-row row-two">
+
+     <div class="info-container">
+       <h2>Pioneer Skate Jam</h2>
+       <img src="images/skateboarding/Pioneer-Jam.jpg">
+       <p class="credit">Photo: @jennaselby</p>
+       <p class="info-copy">Scooped 1st place in the Over 18 category at The Pioneer Club <a href="https://girlskateuk.com/2018/08/08/girl-skate-jam-2018/">Skate Jam</a> in St Albans, Summer 2018.</p>
+     </div>
+
+      <div class="info-container">
+        <h2>Polydor Records</h2>
+        <img src="images/skateboarding/G-Flip.jpg">
+        <p class="credit">Photo: @dannyingham</p>
+        <p class="info-copy">Paid to feature in a promotional video for Aussie artist, G-Flip.</p>
+     </div>
+
+     <div class="info-container">
+       <h2>AW LAB</h2>
+       <img src="images/skateboarding/AW-Lab.jpg">
+       <p class="credit">Photo: @vivigomez12</p>
+       <p class="info-copy">Appeared in a street skating photo shoot for this international sporting distributor.</p>
+    </div>
+
+    <div class="info-container">
+      <h2>Jennyfer</h2>
+      <img src="images/skateboarding/Jennyfer.jpg">
+      <p class="credit">Photo: Esther Wade</p>
+      <p class="info-copy">Modelled and skated for a short advertisement by French brand Jennyfer.</p>
+   </div>
+
+  </div>
+
+</div>
+
+<div class="video-slice">
+  <h2>Skate Edit 2018</h2>
+
+ <div style="width: 100%;">
+  <video  id="big-video" controls>
+    <source src="images/skateboarding/Skateboarding-page-Big-vid.mp4" type="video/mp4">
+  </video>
+</div>
+
+</div>
+
+<div class="video-slice vlogs">
+ <h2>Skateboarding Vlogs</h2>
+
+ <p>Skateboarding has taken me around the world, helping me gain a<br> broader perspective on life and utilising skills as a skateboard instructor.<br> Below are a few examples of some of my most memorable trips.</p>
+
+  <div id="video-row">
+
+    <div class="video-container">
+      <h3>Volunteering With SkatePAL</h3>
+      <div class="YT-container">
+        <iframe width="350" height="196.875" src="https://www.youtube.com/embed/4OFSDgAmkyc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+      <p class="info-copy">In 2016 I travelled to the West Bank for the first time with the charity SkatePAL. It was a valuable experience that developed my skills my skills as a skateboard instructor and helped me to build connections with families and children living under military occupation.</p>
+    </div>
+
+    <div class="video-container">
+      <h3>Surf Skate Yoga Retreat</h3>
+      <div class="YT-container">
+        <iframe width="350" height="196.875" src="https://www.youtube.com/embed/V9RNy1QBDZ4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p class="info-copy">Urban Hippie Collective is a female run company spreading healthy vibes and creating safe learning environments for women. I've helped teach skateboarding on their retreats in Portugal two years in a row and couldn't think of a better way to spend my Easter holidays.</p>
+    </div>
+
+    <div class="video-container">
+      <h3>Jerusalem Skater Girls</h3>
+      <div class="YT-container">
+        <iframe width="350" height="196.875" src="https://www.youtube.com/embed/0RfjIXhfibo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p class="info-copy">Jerusalem is one of the oldest most holy cities in the world and also home to the Jerusalem Skater Girls. I was fortunate enough to meet up with these amazing women to discover more about the female skate scene in such an unusual setting, and how they deal with gender stereotypes and discrimination.</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div id="footer">
+  <div id="soc-icon-holder">
+
+ <a href="https://www.linkedin.com/in/rachael-sherlock-55058669" target="_blank">
+    <div id="linkedin-icon">
+         <svg enable-background="new 0 0 32 32"  overflow="visible" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path clip-rule="evenodd" d="M18.301,14.066v-0.045c-0.01,0.016-0.021,0.031-0.03,0.045H18.301z" fill-rule="evenodd"/><path clip-rule="evenodd" d="M30,0h-1.048H3.048H2C0.896,0,0,0.895,0,2v1.047v25.906V30c0,1.105,0.896,2,2,2  h1.048h25.904H30c1.104,0,2-0.895,2-2v-1.047V3.047V2C32,0.895,31.104,0,30,0z M27.417,25.938h-4.509v-7.191  c0-1.805-0.513-3.039-2.144-3.039c-1.247,0-1.991,0.832-2.315,1.635c-0.119,0.287-0.148,0.688-0.148,1.09v7.506h-4.655  c0,0,0.06-12.559,0-13.82h4.655v1.904c0.598-0.914,1.668-2.221,4.065-2.221c2.967,0,5.051,2.305,5.051,6.432V25.938z M8.148,6.098  c1.385,0,2.238,1,2.266,2.312c0,1.283-0.881,2.312-2.292,2.312H8.096c-1.36,0-2.238-1.029-2.238-2.312  C5.857,7.098,6.762,6.098,8.148,6.098z M10.67,12.17v13.768H6.096V12.17H10.67z" fill-rule="evenodd"/>
+         </svg>
+    </div>
+</a>
+
+<a href="https://www.instagram.com/rachael_sherlock/">
+     <div id="instagram-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+        	<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+        		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+        	<circle cx="41.5" cy="16.4" r="2.9"/>
+        	<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+        		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+        		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+        		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+     </div>
+</a>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="js/responsive-menu.js"></script>
