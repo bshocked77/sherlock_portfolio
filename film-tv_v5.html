@@ -267,6 +267,8 @@ body{
         margin: auto;
         width: 100%;
         font-size: 20px;
+        height: 35px;
+        pointer-events: all;
   }
 
   .text-card .vcta span,
@@ -682,7 +684,7 @@ function scrollWindow(){
 
 
 	var middle = getYPosition - (window.innerHeight / 15);
-	
+
 	var getInitPosition = window.scrollY; // position before scroll action
 
 	// Scroll to Video position
@@ -691,7 +693,7 @@ function scrollWindow(){
 		  left: 0,
 		  behavior: 'smooth' //potential issue with IE
 		})
-	
+
     // Delay lock position untill scroll has finished
 		function lockPosition(){
 		   var getNewPostion = window.scrollY;
@@ -819,6 +821,7 @@ function addVideoContent(event){
    var newCloseButton = document.createElement('span');
    newCloseButton.id = 'close-button';
    newCloseButton.addEventListener("click", closeVideoHolder);
+   newCloseButton.addEventListener("touchend", closeVideoHolder);
 
    var t = document.createTextNode("close");
    newCloseButton.appendChild(t);
@@ -981,6 +984,7 @@ function revealVideoHolder(event){
      var getLiveCtas = document.getElementsByClassName('vcta');
      for(var i = 0; i < getLiveCtas.length; i ++){
        getLiveCtas[i].removeEventListener("click", revealVideoHolder);
+       getLiveCtas[i].removeEventListener("touchstart", revealVideoHolder);
      };
 
 
@@ -1007,6 +1011,7 @@ function addEventListeners(){
 
   	for(var i = 0; i < getVideoCta.length; i ++){
   		getVideoCta[i].addEventListener("click", revealVideoHolder);
+      getVideoCta[i].addEventListener("touchstart", revealVideoHolder);
   	}
 
 }
