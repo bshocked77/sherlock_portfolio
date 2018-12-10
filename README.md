@@ -15,5 +15,5 @@ It is built to be fully responsive and is constructed purely from HTMl, CSS and 
 
 ## To-Do List:
 
--Fix hairy bikers Link
--Reorganise and streamline codebase
+- Fix Hairy Bikers Link
+- Reorganise and streamline codebase
