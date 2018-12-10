@@ -13,3 +13,7 @@ It is built to be fully responsive and is constructed purely from HTMl, CSS and 
 
 #### NOTE: This is still an ongoing project
 
+## To-Do List:
+
+- Fix Hairy Bikers Link
+- Reorganise and streamline codebase
