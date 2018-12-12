@@ -3,6 +3,7 @@
 
 a {
   text-decoration: none;
+  color: unset;
 }
 p a {
   color: #42a39a;
