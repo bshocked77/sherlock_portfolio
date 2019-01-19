@@ -3,301 +3,26 @@
 <html>
 
 <head>
-<title>Film & TV - Rachael Sherlock</title>
-<meta name="description" content="Portfolio containing examples of work and completed projects">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
+  <title>Film & TV - Rachael Sherlock</title>
+  <meta name="description" content="Portfolio containing examples of work and completed projects">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<link rel="stylesheet" href="menu-styling.css">
-<link rel="stylesheet" href="font-styling.css">
-<link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="css/menu-styling.css">
+  <link rel="stylesheet" href="css/font-styling.css">
+  <link rel="stylesheet" href="css/footer.css">
 
-<script type="text/javascript" src="video.json"></script>
+  <link rel="stylesheet" href="css/main-css.min.css">
 
-<style>
-
-body{
-  background-color: #444444;
-  margin: 0px;
-  }
-
-#main-menu {
-  position: static;
-  }
+  <script type="text/javascript" src="video.json"></script>
 
 
-  /* Intro Paragraph */
-
-   #intro-section {
-     background-color: #ffffff;
-     clear: both;
-     text-align: center;
-     padding-top: 20px;
-     margin-top: 18px;
-     padding-bottom: 20px;
-   }
-
-  #intro-section h2{
-    display: none;
-  }
-
-   #intro-section .content-holder{
-     width: 50%;
-     margin: auto;
-   }
-
-
-  /*-- Mobie Styling --*/
-
-  @media only screen and (max-width: 1020px) {
-      #intro-section .content-holder {
-        width: 70%;
-    }
-
-    #intro-section h2{
-      display: block;
-    }
-
-  }
-
-
-  @media only screen and (max-width: 410px) {
-      #intro-section .content-holder {
-        width: 90%;
-    }
-  }
-
-
-/* Gallery Portfolio Grid */
-
-#gallery-container{
-  background-color: #ffffff;
-  padding-top: 18px;
-  clear: both;
-  }
-
-  .gallery-row{
-    display: flex;
-  	flex-direction: row;
-  	flex-wrap: wrap;
-  }
-
-  .gallery-row img{
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .gallery-row .image-holder{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 31%;
-    height: auto;
-    margin: 0.19% 0.35%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .text-card{
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 100%;
-  }
-
-  .text-card .text-card-background{
-   width: 100%;
-   height: 98.7%;
-   background-color: black;
-   background-size: cover;
-   opacity: 0.7;
-  }
-
-  .text-card p{
-   color: #ffffff;
-  font-size: 20px;
-  }
-
-  .card-reveal{
-    top: 0px;
-  }
-
-
- /*--> Drop Down Video Holder <--*/
-
-    #video-holder {
-     flex-grow: 1;
-     flex-shrink: 1;
-     flex-basis: 100%;
-     margin: 0.19% 0.35%;
-     position: relative;
-     overflow: hidden;
-     height: 550px;
-     background-color: #3a3a3a;
-     display: block;
-     margin-bottom: 7px;
-   }
-
-
-
-/* Video Close Icon */
-
-#close-button {
-    max-width: 100px;
-    padding: 7px 22px;
-    text-align: center;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0px;
-    background-color: #dcdcdc;
-    color: #000000;
-    border-radius: 5px;
-    text-transform: uppercase;
-    margin: 22px auto 0px;
-    font-size: 20px;
-}
-
-
-/* Video Content Iframe */
-#video-holder iframe {
-	display: block;
-	margin: auto;
-  margin-top: 26px;
-}
-
-@media only screen and (max-width: 840px) {
-
-    #video-holder iframe {
-    	height: 333px;
-      width: 592px;
-    }
-
-    #video-holder {
-      height: 440px;
-   }
-
-}
-
-
-@media only screen and (max-width: 605px) {
-
-    #video-holder iframe {
-      height: 333px;
-      width: 96vw;
-  }
-
-}
-
-
-/* Grid Media Queries */
-
-@media only screen and (max-width: 1050px) {
-  .gallery-row .image-holder{
-    flex-basis: 35%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .gallery-row .image-holder{
-    flex-basis: 50%;
-  }
-
-  .text-card{
-    top: 0px;
-  }
-}
-
-
-/* Font Styling on Gallery Text Card */
-
-  .text-card h2{
-    color: #ffffff;
-    font-weight: 200;
-    margin: auto;
-    max-width: 365px;
-    font-size: 30px;
-    text-align: center;
-    position: absolute;
-    top: 32%;
-    left: 0px;
-    right: 0px;
-  }
-
-  .text-card h3{
-    color: #ffffff;
-    font-weight: 200;
-    margin: auto;
-    max-width: 350px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    right: 0px;
-    font-size: 22px;
-  }
-
-  .text-card p{
-    color: #ffffff;
-    margin: auto;
-    max-width: 350px;
-    text-align: center;
-    position: absolute;
-    top: 56%;
-    left: 0px;
-    right: 0px;
-    font-size: 17px;
-  }
-
-  .text-card .vcta{
-        color: #ffffff;
-        top: 81%;
-        margin: auto;
-        position: absolute;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        font-size: 20px;
-  }
-
-  .text-card a{
-        color: #ffffff;
-        top: 81%;
-        margin: auto;
-        position: absolute;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        font-size: 20px;
-        height: 35px;
-        pointer-events: all;
-  }
-
-  .text-card .vcta span,
-  .text-card span.cta {
-    padding-right: 1%;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0px;
-    background-color: #dcdcdc;
-    padding: 5px 11px 5px 16px;
-    color: #000000;
-    border-radius: 5px;
-
-  }
-
-
-
-  .text-card .description-top-space{
-    top: 65%;
-  }
-
-
-</style>
 </head>
 
 
 
 
-<body>
+<body id="film-tv">
 
   <div id="main-menu" class="content-page">
 
@@ -325,9 +50,9 @@ body{
 
     <h2>Film & TV</h2>
 
-    <p id="slice-one-text">Over the past decade I’ve worked on many productions, from my own personal projects, to national daytime shows, live events and musical productions. My role in all has always been varied and diverse, switching between the differing disciplines of sound, camera, lighting and scenic departments most notably for ITV as their Senior Studio Technician.</p>
+    <p>Over the past decade I’ve worked on many productions, from my own personal projects, to national daytime shows, live events and musical productions. My role in all has always been varied and diverse, switching between the differing disciplines of sound, camera, lighting and scenic departments most notably for ITV as their Senior Studio Technician.</p>
 
-    <p id="slice-one-text">Below are some of my favourite examples of the various projects and shows that I have worked on.<p>
+    <p>Below are some of my favourite examples of the various projects and shows that I have worked on.<p>
 
   </div>
 
