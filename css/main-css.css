@@ -235,7 +235,7 @@ body{
 
 @media only screen and (max-width: 510px) {
   #slice-one-text {
-  width: unset;
+  width: unset !important;
   padding: 0px 15px;
   }
 }
@@ -841,6 +841,10 @@ body#about {
   position: static;
   }
 
+#about #main-menu.content-page ul#button-list.responsive {
+    margin-top: 4px;
+ }
+
 /* Image Banner */
 
 #about #full-width-banner{
@@ -944,7 +948,7 @@ body#about {
 }
 
 #am-text-wrapper p#first-para{
-      background-color: #c1dcda;
+      background-color: #c1dcda87;
       border-radius: 6px;
       padding: 15px 11px;
       margin-top: 20px;
@@ -956,6 +960,9 @@ body#about {
 #am-text-wrapper #body-copy{
   width: 85%;
   padding-left: 8%;
+  max-width: 600px;
+  margin-top: 60px;
+  min-height: 500px;
 }
 #am-text-wrapper p:first-of-type{
   margin-top: 10px;
