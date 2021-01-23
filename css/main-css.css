@@ -917,12 +917,10 @@ body#about {
 
 #am-img-wrapper img{
   width: 82%;
+  max-width: 660px;
   height: auto;
-  max-height: 548px;
-  max-width: 410px;
-  margin: 30px auto;
+  margin: 60px auto 20px;
   display: block;
-
 }
 
 #am-text-wrapper{
